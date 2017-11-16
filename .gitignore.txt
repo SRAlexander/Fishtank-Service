@@ -1,7 +1,7 @@
-Fishtank-Service\FishTankServices\bin\
-Fishtank-Service\FishTankServices\obj\
-Fishtank-Service\REST\bin\
-Fishtank-Service\REST\obj\
-Fishtank-Service\REST.Tests\bin\
-Fishtank-Service\REST.Tests\obj\
-Fishtank-Service\TestResults
+Fishtank-Service\Fishtank-Service\FishTankServices\bin\
+Fishtank-Service\Fishtank-Service\FishTankServices\obj\
+Fishtank-Service\Fishtank-Service\REST\bin\
+Fishtank-Service\Fishtank-Service\REST\obj\
+Fishtank-Service\Fishtank-Service\REST.Tests\bin\
+Fishtank-Service\Fishtank-Service\REST.Tests\obj\
+Fishtank-Service\Fishtank-Service\TestResults
