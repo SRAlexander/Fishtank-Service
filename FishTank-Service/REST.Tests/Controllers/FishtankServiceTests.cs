@@ -97,7 +97,7 @@ namespace UnitTests.Tests.Controllers
             var createRes = await _fishtankService.CreateFishtank();
             Assert.IsTrue(createRes);
 
-            var addFishRes= await _fishtankService.AddFish(FishType.Goldfish);
+            var addFishRes= await _fishtankService.AddFish(FishType.Goldfish, "");
             Assert.IsNotNull(addFishRes);
         }
 
@@ -108,7 +108,7 @@ namespace UnitTests.Tests.Controllers
         [TestMethod]
         public async Task AddFishToNullTank()
         {
-            var addFishRes = await _fishtankService.AddFish(FishType.Goldfish);
+            var addFishRes = await _fishtankService.AddFish(FishType.Goldfish, "");
             Assert.IsNull(addFishRes);
         }
 
@@ -123,9 +123,9 @@ namespace UnitTests.Tests.Controllers
             var createRes = await _fishtankService.CreateFishtank();
             Assert.IsTrue(createRes);
 
-            await _fishtankService.AddFish(FishType.Goldfish);
-            await _fishtankService.AddFish(FishType.Angelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
+            await _fishtankService.AddFish(FishType.Goldfish, "");
+            await _fishtankService.AddFish(FishType.Angelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
             var rescount = (await _fishtankService.GetFishTankContents()).Count;
             Assert.AreEqual(rescount, 3);
         }
@@ -141,9 +141,9 @@ namespace UnitTests.Tests.Controllers
             var createRes = await _fishtankService.CreateFishtank();
             Assert.IsTrue(createRes);
 
-            await _fishtankService.AddFish(FishType.Goldfish);
-            await _fishtankService.AddFish(FishType.Angelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
+            await _fishtankService.AddFish(FishType.Goldfish, "");
+            await _fishtankService.AddFish(FishType.Angelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
             var res = await _fishtankService.Feed();
 
             Assert.AreEqual(res, 0.6);
@@ -160,16 +160,16 @@ namespace UnitTests.Tests.Controllers
             var createRes = await _fishtankService.CreateFishtank();
             Assert.IsTrue(createRes);
 
-            await _fishtankService.AddFish(FishType.Goldfish);
-            await _fishtankService.AddFish(FishType.Angelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
-            await _fishtankService.AddFish(FishType.Goldfish);
-            await _fishtankService.AddFish(FishType.Angelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
-            await _fishtankService.AddFish(FishType.Goldfish);
-            await _fishtankService.AddFish(FishType.Angelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
+            await _fishtankService.AddFish(FishType.Goldfish, "");
+            await _fishtankService.AddFish(FishType.Angelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
+            await _fishtankService.AddFish(FishType.Goldfish, "");
+            await _fishtankService.AddFish(FishType.Angelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
+            await _fishtankService.AddFish(FishType.Goldfish, "");
+            await _fishtankService.AddFish(FishType.Angelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
 
             var res = await _fishtankService.Feed();
 
@@ -187,9 +187,9 @@ namespace UnitTests.Tests.Controllers
             var createRes = await _fishtankService.CreateFishtank();
             Assert.IsTrue(createRes);
 
-            await _fishtankService.AddFish(FishType.Goldfish);
-            await _fishtankService.AddFish(FishType.Angelfish);
-            await _fishtankService.AddFish(FishType.Babelfish);
+            await _fishtankService.AddFish(FishType.Goldfish, "");
+            await _fishtankService.AddFish(FishType.Angelfish, "");
+            await _fishtankService.AddFish(FishType.Babelfish, "");
             var res = await _fishtankService.Feed();
 
             Assert.AreEqual(res, 0.6);
@@ -207,6 +207,86 @@ namespace UnitTests.Tests.Controllers
         {
             var details = await _fishtankService.GetTankDetails();
             Assert.IsNull(details);
+        }
+
+        /// <summary>
+        /// Check that we can add anmes and that the names exist after
+        /// </summary>
+        [TestMethod]
+        public async Task AddFishWithNames()
+        {
+            // Create the first fishtank
+            var createRes = await _fishtankService.CreateFishtank();
+            Assert.IsTrue(createRes);
+
+            await _fishtankService.AddFish(FishType.Goldfish, "Scott");
+            await _fishtankService.AddFish(FishType.Angelfish, "Robert");
+            await _fishtankService.AddFish(FishType.Babelfish, "Alexander");
+
+            var names = await _fishtankService.GetFishNames();
+            var nameOneExist = names.Contains("Scott");
+            var nameTwoExists = names.Contains("Robert");
+            var nameThreeExists = names.Contains("Alexander");
+
+            Assert.IsTrue(nameOneExist);
+            Assert.IsTrue(nameTwoExists);
+            Assert.IsTrue(nameThreeExists);
+        }
+
+        // Check that we can remove a fish by type
+        [TestMethod]
+        public async Task RemoveFishByType()
+        {
+            // Create the first fishtank
+            var createRes = await _fishtankService.CreateFishtank();
+            Assert.IsTrue(createRes);
+
+            await _fishtankService.AddFish(FishType.Babelfish, "Alexander");
+            var msgString = await _fishtankService.RemoveFishByType(FishType.Babelfish);
+            var res = string.IsNullOrEmpty(msgString);
+            Assert.IsTrue(res);
+        }
+
+        // Check that we get an error when we tried to remove a fish by type that does not exist
+        [TestMethod]
+        public async Task RemoveFishByTypeDoesNotExist()
+        {
+            // Create the first fishtank
+            var createRes = await _fishtankService.CreateFishtank();
+            Assert.IsTrue(createRes);
+
+            await _fishtankService.AddFish(FishType.Babelfish, "Alexander");
+            var msgString = await _fishtankService.RemoveFishByType(FishType.Angelfish);
+            var res = string.IsNullOrEmpty(msgString);
+            Assert.IsFalse(res);
+        }
+
+        // Check that we can remove a fish by type
+        [TestMethod]
+        public async Task RemoveFishByName()
+        {
+            // Create the first fishtank
+            var createRes = await _fishtankService.CreateFishtank();
+            Assert.IsTrue(createRes);
+
+            await _fishtankService.AddFish(FishType.Babelfish, "Alexander");
+            var msgString = await _fishtankService.RemoveFishByName("Alexander");
+            var res = string.IsNullOrEmpty(msgString);
+            Assert.IsTrue(res);
+        }
+
+        // Check that we get an error when we tried to remove a fish by type that does not exist
+        [TestMethod]
+        public async Task RemoveFishByNameDoesNotExist()
+        {
+            // Create the first fishtank
+            var createRes = await _fishtankService.CreateFishtank();
+            Assert.IsTrue(createRes);
+
+            await _fishtankService.AddFish(FishType.Babelfish, "Robert");
+            var msgString = await _fishtankService.RemoveFishByName("Alexander");
+            var res = string.IsNullOrEmpty(msgString);
+            Assert.IsFalse(res);
         }
 
 

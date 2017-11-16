@@ -6,11 +6,13 @@
     {
         protected double FoodRequirement;
         protected string Type;
+        protected string Name;
 
         protected Fish()
         {
             Type = "Fish";
             FoodRequirement = 0.0;
+            Name = "Bruce";
         }
 
         public virtual string GetDescription()
@@ -27,6 +29,11 @@
         {
             return Type;
         }
+
+        public string GetFishName()
+        {
+            return Name;
+        }
     }
 
     /// <summary>
@@ -34,10 +41,11 @@
     /// </summary>
     public class GoldFish : Fish
     {
-        public GoldFish()
+        public GoldFish(string name)
         {
             this.Type = "Goldfish";
             this.FoodRequirement = 0.1;
+            this.Name = !string.IsNullOrEmpty(name) ? name : "Goldie";
         }
 
     }
@@ -47,10 +55,11 @@
     /// </summary>
     public class AngelFish : Fish
     {
-        public AngelFish()
+        public AngelFish(string name)
         {
             this.Type = "Angelfish";
             this.FoodRequirement = 0.2;
+            this.Name = !string.IsNullOrEmpty(name) ? name : "Gabriel";
         }
     }
 
@@ -59,10 +68,11 @@
     /// </summary>
     public class BabelFish : Fish
     {
-        public BabelFish()
+        public BabelFish(string name)
         {
             this.Type = "Babelfish";
             this.FoodRequirement = 0.3;
+            this.Name = !string.IsNullOrEmpty(name) ? name : "Bable";
         }
     }
 }

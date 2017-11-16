@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FishtankServices.Models
@@ -14,6 +15,12 @@ namespace FishtankServices.Models
             _shoalingFish = new List<Fish>();
         }
 
+        public List<Fish> GetShoalingFish()
+        {
+            List<Fish> resFish = new List<Fish>(_shoalingFish);
+            return resFish;
+        }
+
         /// <summary>
         /// Add a fish to the tank
         /// </summary>
@@ -21,12 +28,6 @@ namespace FishtankServices.Models
         public void AddFish(Fish fish)
         {
             _shoalingFish.Add(fish);
-        }
-
-        public List<Fish> GetShoalingFish()
-        {
-            List<Fish> resFish = new List<Fish>(_shoalingFish);
-            return resFish;
         }
 
         /// <summary>
@@ -42,13 +43,38 @@ namespace FishtankServices.Models
         }
 
         /// <summary>
-        /// Get the total food requirments based on the number of fish
+        /// Remove the first fish of a given name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool RemoveFishByType(string type)
+        {
+            var removingFish = _shoalingFish.FirstOrDefault(fish => fish.GetFishType() == type);
+            if (removingFish == null) return false;
+            _shoalingFish.Remove(removingFish);
+            return true;
+        }
+
+        /// <summary>
+        /// Remove the first fish of a given name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool RemoveFishByName(string name)
+        {
+            var removingFish = _shoalingFish.FirstOrDefault(fish => string.Equals(name, fish.GetFishName(), StringComparison.CurrentCultureIgnoreCase));
+            if (removingFish == null) return false;
+            _shoalingFish.Remove(removingFish);
+            return true;
+        }
+        
+        /// <summary>
+        /// Get a list of all fish names
         /// </summary>
         /// <returns></returns>
-        public double Feed()
+        public List<string> GetFishNames()
         {
-            double totalFood = _shoalingFish.Sum(fish => fish.GetFoodRequirements());
-            return totalFood;
+            return _shoalingFish.Select(fish => fish.GetFishName()).ToList();
         }
 
         /// <summary>
@@ -66,5 +92,16 @@ namespace FishtankServices.Models
             }
             return res;
         }
+
+        /// <summary>
+        /// Get the total food requirments based on the number of fish
+        /// </summary>
+        /// <returns></returns>
+        public double Feed()
+        {
+            double totalFood = _shoalingFish.Sum(fish => fish.GetFoodRequirements());
+            return totalFood;
+        }
+
     }
 }

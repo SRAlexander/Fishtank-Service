@@ -69,15 +69,25 @@ namespace FishtankServices.Services.Models
         }
 
         /// <summary>
+        /// Get the amount of food required by the fish in the tank
+        /// </summary>
+        /// <returns></returns>
+        public async Task<double> Feed()
+        {
+            return _fishTank == null ? 0 : Math.Round(_fishTank.Feed(), 1);
+        }
+
+        /// <summary>
         /// Add a fish to the tank
         /// </summary>
         /// <param name="type"></param>
+        /// <param name="name"></param>
         /// <returns></returns>
-        public async Task<Fish> AddFish(FishType type)
+        public async Task<Fish> AddFish(FishType type, string name)
         {
             if (_fishTank == null) return null;
 
-            Fish newFish = CreateFishFromEnum(type);
+            Fish newFish = CreateFishFromEnum(type, name);
             if (newFish == null)
             {
                 return null;
@@ -87,13 +97,9 @@ namespace FishtankServices.Services.Models
             return newFish;
         }
 
-        /// <summary>
-        /// Get the amount of food required by the fish in the tank
-        /// </summary>
-        /// <returns></returns>
-        public async Task<double> Feed()
+        public async Task<List<string>> GetFishNames()
         {
-            return Math.Round(_fishTank.Feed(),1);
+            return _fishTank?.GetFishNames();
         }
 
         /// <summary>
@@ -103,15 +109,34 @@ namespace FishtankServices.Services.Models
         /// <returns></returns>
         public async Task<string> RemoveFishByType(FishType type)
         {
-            var fish = CreateFishFromEnum(type);
-            var removed = _fishTank.RemoveFish(fish);
+            if (_fishTank == null) return null;
+
+            var removed = _fishTank.RemoveFishByType(type.ToString());
 
             if (removed)
             {
                 return "";
             }
 
-            return "No " + fish.GetFishType() + " are in the tank to remove";
+            return "No " + type + " are in the tank to remove";
+        }
+
+        /// <summary>
+        /// Remove a fish of a given type
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public async Task<string> RemoveFishByName(string name)
+        {
+            var removed = _fishTank.RemoveFishByName(name);
+
+            if (removed)
+            {
+                return "";
+            }
+
+            return "Could not find " + name + " in the tank to remove";
         }
 
         /// <summary>
@@ -119,24 +144,24 @@ namespace FishtankServices.Services.Models
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        protected Fish CreateFishFromEnum(FishType type)
+        protected Fish CreateFishFromEnum(FishType type, string name)
         {
             Fish newFish = null;
             switch (type)
             {
                 case FishType.Goldfish:
                 {
-                    newFish = new GoldFish();
+                    newFish = new GoldFish(name);
                     break;
                 }
                 case FishType.Angelfish:
                 {
-                    newFish = new AngelFish();
+                    newFish = new AngelFish(name);
                     break;
                 }
                 case FishType.Babelfish:
                 {
-                    newFish = new BabelFish();
+                    newFish = new BabelFish(name);
                     break;
                 }
             }

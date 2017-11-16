@@ -1,3 +1,13 @@
+# Notes
+
+- Intital brief is located in the FishTankServices project > models
+- Added a bit of flair by building a rest layer on top using depedency injection and swagger to view API calls
+- Two forms of unit testing can be found, service testing and rest layer testing using Moq service Mocker.
+- Possible Further development - Saving of tank states to a DB through an Entity Framework layer and injection.
+
+
+
+
 # Fishtank-Service
 
 Demo code base off the following brief...
@@ -15,10 +25,10 @@ Here are the user stories:
  
 Ensure the design allows me to add more types of fish in the future without having to change the tank class.
 
-
-
 Intial Thoughts...
 
 - "without having to change the tank class" - A form of stratergy pattern will be required.
 - Adding flair - Will build a rest layer on top to turn it into a web service. 
+
+
 
