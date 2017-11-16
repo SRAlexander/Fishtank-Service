@@ -1,0 +1,4 @@
+C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\REST\bin\
+C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\REST\obj\
+C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices3\bin\
+C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices3\obj\

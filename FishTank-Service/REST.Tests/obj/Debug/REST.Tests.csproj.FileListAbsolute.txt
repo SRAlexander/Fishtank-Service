@@ -1,0 +1,2 @@
+C:\Users\Scott\Documents\Visual Studio 2017\Projects\FishTank-Service\REST.Tests\obj\Debug\REST.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\Visual Studio 2017\Projects\FishTank-Service\REST.Tests\obj\Debug\REST.Tests.csproj.CoreCompileInputs.cache
