@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishtankREST", "REST\Fishta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST.Tests", "REST.Tests\REST.Tests.csproj", "{77BD4A45-8818-4C52-9313-1CB55FBA1B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishTankServices", "FishTankServices3\FishTankServices.csproj", "{74E1DAD3-8A5A-4C08-AB5D-A5E6DA08E23A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishTankServices", "FishTankServices\FishTankServices.csproj", "{74E1DAD3-8A5A-4C08-AB5D-A5E6DA08E23A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
