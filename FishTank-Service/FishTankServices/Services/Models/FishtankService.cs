@@ -4,14 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using FishtankServices.Models;
 using FishTankServices.Dto;
-using REST.Models;
+using UnitTests.Models;
 
 namespace FishtankServices.Services.Models
 {
     /// <summary>
     /// Singleton designed injection class so we can build a rest layer on top
     /// </summary>
-    class FishtankService : IFishtankService
+    public class FishtankService : IFishtankService
     {
         private Fishtank _fishTank;
 
@@ -49,7 +49,8 @@ namespace FishtankServices.Services.Models
         public async Task<List<FishDto>> GetFishTankContents()
         {
             //TODO : future ammendment:- implement automapper
-            return _fishTank.GetShoalingFish()
+
+            return _fishTank?.GetShoalingFish()
                 .Select(fish => new FishDto()
                 {
                     Type = fish.GetFishType(),
@@ -74,8 +75,9 @@ namespace FishtankServices.Services.Models
         /// <returns></returns>
         public async Task<Fish> AddFish(FishType type)
         {
-            Fish newFish = CreateFishFromEnum(type);
+            if (_fishTank == null) return null;
 
+            Fish newFish = CreateFishFromEnum(type);
             if (newFish == null)
             {
                 return null;

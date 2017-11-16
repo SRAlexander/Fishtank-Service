@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using FishtankServices.Models;
 using FishTankServices.Dto;
-using REST.Models;
+using UnitTests.Models;
 
 namespace FishtankServices.Services
 {

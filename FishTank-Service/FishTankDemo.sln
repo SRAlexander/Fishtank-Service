@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishtankREST", "REST\FishtankREST.csproj", "{D85B7219-3A6C-4B72-8FF0-330AD4A2AC07}"
 	ProjectSection(ProjectDependencies) = postProject
 		{74E1DAD3-8A5A-4C08-AB5D-A5E6DA08E23A} = {74E1DAD3-8A5A-4C08-AB5D-A5E6DA08E23A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST.Tests", "REST.Tests\REST.Tests.csproj", "{77BD4A45-8818-4C52-9313-1CB55FBA1B50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "REST.Tests\UnitTests.csproj", "{77BD4A45-8818-4C52-9313-1CB55FBA1B50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishTankServices", "FishTankServices\FishTankServices.csproj", "{74E1DAD3-8A5A-4C08-AB5D-A5E6DA08E23A}"
 EndProject

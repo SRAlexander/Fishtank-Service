@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using Swagger.Net.Application;
 
-namespace REST
+namespace UnitTests
 {
     public static class WebApiConfig
     {

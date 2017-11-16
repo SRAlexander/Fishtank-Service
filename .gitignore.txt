@@ -1,4 +1,7 @@
-C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\REST\bin\
-C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\REST\obj\
-C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices\bin\
-C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices\obj\
+Fishtank-Service\FishTank-Service\REST\bin\
+Fishtank-Service\FishTank-Service\REST\obj\
+Fishtank-Service\FishTank-Service\FishTankServices\bin\
+Fishtank-Service\FishTank-Service\FishTankServices\obj\
+Fishtank-Service\FishTank-Service\REST.Tests\bin\
+Fishtank-Service\FishTank-Service\REST.Tests\obj\
+Fishtank-Service\FishTank-Service\TestResults

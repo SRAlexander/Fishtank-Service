@@ -6,7 +6,7 @@ using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using SimpleInjector.Integration.WebApi;
 
-namespace REST
+namespace UnitTests
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
