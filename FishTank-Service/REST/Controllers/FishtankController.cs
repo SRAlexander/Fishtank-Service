@@ -5,9 +5,9 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using FishtankServices.Models;
 using FishtankServices.Services;
-using UnitTests.Models;
+using FishTankServices.Models;
 
-namespace UnitTests.Controllers
+namespace REST.Controllers
 {
     /// <summary>
     /// Fishtank controller using dependency injection

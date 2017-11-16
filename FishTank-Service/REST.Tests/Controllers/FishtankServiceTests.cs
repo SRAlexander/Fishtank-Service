@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using FishtankServices.Services;
 using FishtankServices.Services.Models;
+using FishTankServices.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnitTests.Models;
 
 namespace UnitTests.Tests.Controllers
 {
@@ -13,7 +12,7 @@ namespace UnitTests.Tests.Controllers
 
         public FishtankServiceTests()
         {
-            this._fishtankService = new FishtankService();
+            _fishtankService = new FishtankService();
         }
 
         /// <summary>
@@ -147,7 +146,7 @@ namespace UnitTests.Tests.Controllers
             await _fishtankService.AddFish(FishType.Babelfish);
             var res = await _fishtankService.Feed();
 
-            Assert.AreEqual(res, (double) 0.6);
+            Assert.AreEqual(res, 0.6);
         }
 
         /// <summary>
@@ -174,7 +173,7 @@ namespace UnitTests.Tests.Controllers
 
             var res = await _fishtankService.Feed();
 
-            Assert.AreEqual(res, (double)2.1);
+            Assert.AreEqual(res, 2.1);
         }
 
         /// <summary>
@@ -193,7 +192,7 @@ namespace UnitTests.Tests.Controllers
             await _fishtankService.AddFish(FishType.Babelfish);
             var res = await _fishtankService.Feed();
 
-            Assert.AreEqual(res, (double) 0.6);
+            Assert.AreEqual(res, 0.6);
             var details = await _fishtankService.GetTankDetails();
 
             Assert.AreEqual(details.Count, 3);

@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using FishTankServices;
+using REST;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using SimpleInjector.Integration.WebApi;

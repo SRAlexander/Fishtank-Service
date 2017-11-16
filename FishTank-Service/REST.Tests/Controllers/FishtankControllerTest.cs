@@ -4,7 +4,7 @@ using System.Web.Http.Results;
 using FishtankServices.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using UnitTests.Controllers;
+using REST.Controllers;
 
 // Futher example of testing the the rest layers using moq to insert Mock services
 namespace UnitTests.Tests.Controllers

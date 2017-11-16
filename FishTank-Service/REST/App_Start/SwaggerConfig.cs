@@ -1,18 +1,16 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
-using System.Web.Http.Routing.Constraints;
-using System.Collections.Generic;
-
-using UnitTests;
-using Swagger.Net.Application;
+using REST;
 using Swagger.Net;
+using Swagger.Net.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace UnitTests
+namespace REST
 {
     public class SwaggerConfig
     {

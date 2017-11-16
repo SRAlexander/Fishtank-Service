@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FishtankServices.Models;
 using FishTankServices.Dto;
-using UnitTests.Models;
+using FishTankServices.Models;
 
 namespace FishtankServices.Services.Models
 {

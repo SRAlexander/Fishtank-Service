@@ -6,12 +6,12 @@ namespace FishtankServices.Models
     public class Fishtank
     {
         // List of abstract fish so we can add new fish types without changing the tank class
-        public readonly List<Fish> _shoalingFish;
+        private readonly List<Fish> _shoalingFish;
 
         // Constructor
         public Fishtank()
         {
-            this._shoalingFish = new List<Fish>();
+            _shoalingFish = new List<Fish>();
         }
 
         /// <summary>
@@ -21,7 +21,6 @@ namespace FishtankServices.Models
         public void AddFish(Fish fish)
         {
             _shoalingFish.Add(fish);
-            return;
         }
 
         public List<Fish> GetShoalingFish()
