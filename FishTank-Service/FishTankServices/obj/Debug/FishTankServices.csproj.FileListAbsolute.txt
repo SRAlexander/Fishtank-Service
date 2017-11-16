@@ -34,29 +34,6 @@ C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServic
 C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.csproj.CoreCompileInputs.cache
 C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.dll
 C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.pdb
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\FishTankServices.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\FishTankServices.pdb
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\AutoMapper.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Newtonsoft.Json.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.Integration.WebApi.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Net.Http.Formatting.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Web.Http.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\AutoMapper.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Newtonsoft.Json.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.Integration.WebApi.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Net.Http.Formatting.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Web.Http.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.csprojResolveAssemblyReference.cache
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.csproj.CoreCompileInputs.cache
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.pdb
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Castle.Core.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Moq.dll
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Castle.Core.xml
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Moq.pdb
-\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Moq.xml
 \\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service2\FishTank-Service\FishTankServices\bin\Debug\FishTankServices.dll
 \\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service2\FishTank-Service\FishTankServices\bin\Debug\FishTankServices.pdb
 \\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service2\FishTank-Service\FishTankServices\bin\Debug\AutoMapper.dll
@@ -80,3 +57,26 @@ C:\Users\Scott\Documents\GitHub\Fishtank-Service\FishTank-Service\FishTankServic
 \\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service2\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.csproj.CoreCompileInputs.cache
 \\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service2\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.dll
 \\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service2\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.pdb
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\FishTankServices.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\FishTankServices.pdb
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\AutoMapper.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Castle.Core.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Moq.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Newtonsoft.Json.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.Integration.WebApi.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Net.Http.Formatting.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Web.Http.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\AutoMapper.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Castle.Core.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Moq.pdb
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Moq.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\Newtonsoft.Json.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\SimpleInjector.Integration.WebApi.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Net.Http.Formatting.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\bin\Debug\System.Web.Http.xml
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.csprojResolveAssemblyReference.cache
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.csproj.CoreCompileInputs.cache
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.dll
+\\Jupiter\Users\Scott\My Documents\Github\Fishtank-Service\FishTank-Service\FishTankServices\obj\Debug\FishTankServices.pdb

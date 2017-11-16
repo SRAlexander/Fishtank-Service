@@ -111,14 +111,10 @@ namespace FishtankServices.Services.Models
         {
             if (_fishTank == null) return null;
 
-            var removed = _fishTank.RemoveFishByType(type.ToString());
-
-            if (removed)
-            {
-                return "";
-            }
-
-            return "No " + type + " are in the tank to remove";
+            var fish = _fishTank.GetShoalingFish().FirstOrDefault(f => f.GetFishType() == type.ToString());
+            if (fish == null) return "No " + type + " are in the tank to remove";
+            var removed = _fishTank.RemoveFish(fish);
+            return removed ? "" : "Could not remove fish from tank!";
         }
 
         /// <summary>
@@ -129,14 +125,13 @@ namespace FishtankServices.Services.Models
         /// <returns></returns>
         public async Task<string> RemoveFishByName(string name)
         {
-            var removed = _fishTank.RemoveFishByName(name);
+            if (_fishTank == null) return null;
 
-            if (removed)
-            {
-                return "";
-            }
+            var fish = _fishTank.GetShoalingFish().FirstOrDefault(f => string.Equals(f.GetFishName(), name, StringComparison.CurrentCultureIgnoreCase));
+            if (fish == null) return "Could not find " + name + " in the tank to remove";
+            var removed = _fishTank.RemoveFish(fish);
+            return removed ? "" : "Could not remove fish from tank!";
 
-            return "Could not find " + name + " in the tank to remove";
         }
 
         /// <summary>

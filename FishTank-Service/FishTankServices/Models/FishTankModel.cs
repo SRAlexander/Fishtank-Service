@@ -41,32 +41,6 @@ namespace FishtankServices.Models
             _shoalingFish.Remove(fish);
             return true;
         }
-
-        /// <summary>
-        /// Remove the first fish of a given name
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public bool RemoveFishByType(string type)
-        {
-            var removingFish = _shoalingFish.FirstOrDefault(fish => fish.GetFishType() == type);
-            if (removingFish == null) return false;
-            _shoalingFish.Remove(removingFish);
-            return true;
-        }
-
-        /// <summary>
-        /// Remove the first fish of a given name
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public bool RemoveFishByName(string name)
-        {
-            var removingFish = _shoalingFish.FirstOrDefault(fish => string.Equals(name, fish.GetFishName(), StringComparison.CurrentCultureIgnoreCase));
-            if (removingFish == null) return false;
-            _shoalingFish.Remove(removingFish);
-            return true;
-        }
         
         /// <summary>
         /// Get a list of all fish names

@@ -5,7 +5,7 @@
 - Two forms of unit testing can be found, service testing and rest layer testing using Moq service Mocker.
 - Possible Further development - Saving of tank states to a DB through an Entity Framework layer and injection.
 
-
+- Testing note, if using the Rest layer to test, _fishtank needs to be created before using any other api call otherwise you will just get an error message telling you to create it.
 
 
 # Fishtank-Service
